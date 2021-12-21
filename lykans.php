@@ -3,100 +3,6 @@
 
 //Set font color
 
-$mydummy=[];
-
-   array_push($mydummy,"lykapro002");
-   array_push($mydummy,"lykapro003");
-
-
-$myaccounts=[];
-   array_push($myaccounts,"lykapro001");
-
-
-
-
-// Regular Colors
-$Black    = "\033[0;30m" ;     //  # Black
-$CRed     = "\033[0;31m" ;     //  # Red
-$Green    = "\033[0;32m" ;       # Green
-$Yellow   = "\033[0;33m" ;      # Yellow
-$Blue     = "\033[0;34m" ;        # Blue
-$Purple   = "\033[0;35m" ;      # Purple
-$Cyan     = "\033[0;36m" ;        # Cyan
-$White    = "\033[0;37m" ;       # White
-
-$ScriptName ="PHP LykaPro Menu (c) lykapro team 2021";
-$Web="https://github.com/lykapro/lyka";
-
-echo "$White\n#ActiveLYKA";
-echo date("l");
-echo "\n\n";
-
-echo "$White";
-echo "$ScriptName\n";
-echo "$Web\n";
-echo "$Green\nWhat do you want to do today?\n";
-echo "$Yellow\n1. Rate Posts";
-echo "$Cyan\n2. Add Moments";
-echo "$Yellow\n3. Add Posts";
-echo "$Cyan\n4. Check GEMS";
-echo "$Yellow\n5. Harvest GEMS";
-echo "$Green\n6. Exit\n$Yellow\n";
-
-   $inputtask = readline("\nEnter Task No : ");
-
-   switch($inputtask) {
-      case "1" :
-        @system("clear");
-        rateit($mydummy,$myaccounts);
-        exit;
-      case "2" :
-        @system("clear");
-        moments($mydummy,$myaccounts);
-        exit;        
-      case "3" :
-        @system("clear");
-        postit($mydummy,$myaccounts);
-        exit;
-      case "4" :
-        @system("clear");
-        checkgems($mydummy,$myaccounts);
-        exit;
-      case "5" :
-        @system("clear");
-        harvestgems($mydummy,$myaccounts);
-        exit;
-      case "6" :
-        echo "\nThank you";
-        echo "\nProgram exits\n\n";
-        echo "$White";
-        echo "$ScriptName\n";
-        echo "$Web\n\n";
-        exit;  
-      default :
-        echo "$Cyan\nPls. select Task by entering 1-6";
-        echo "\nProgram exits\n\n";
-        echo "$White";
-        echo "$ScriptName\n";
-        echo "$Web\n\n";
-        exit;  
-
-   } //end of switch..case
-
-function rateit($mydummy,$myaccounts)
-{
-   @system("clear");
-
-   // Regular Colors
-   $Black    = "\033[0;30m" ;     //  # Black
-   $CRed     = "\033[0;31m" ;     //  # Red
-   $Green    = "\033[0;32m" ;       # Green
-   $Yellow   = "\033[0;33m" ;      # Yellow
-   $Blue     = "\033[0;34m" ;        # Blue
-   $Purple   = "\033[0;35m" ;      # Purple
-   $Cyan     = "\033[0;36m" ;        # Cyan
-   $White    = "\033[0;37m" ;       # White
-   
    //init deviceID array
    $PhoneID=['df0439087259ad38','a5ead687bdb3729c','87a87fe99d0039a5'];
    array_push($PhoneID,'7d7e6f904741daea');
@@ -121,9 +27,121 @@ function rateit($mydummy,$myaccounts)
    "Vivo X6S","Vivo Y31L","Oppo A2","Oppo A11","Vivo Xplay5 Elite","Vivo Y51L","Vivo X6 Plus",
    "Vivo X6","Vivo Y51","Vivo Y27L","Vivo Y15S","Vivo V1Max","Vivo V1","Vivo X5Pro","Vivo X5Max+",
    "Vivo X5S L","Vivo X Shot","Vivo X3S","Vivo Y15","Vivo Y22","Vivo X5Max","Nokia 3210");
+
+
+$myaccounts=[];
+
+
+array_push($myaccounts,"jadeashley01");
+array_push($myaccounts,"joegie01");
+array_push($myaccounts,"liela0520");
+array_push($myaccounts,"radrian2005");
+
+$mydummy=[];
+
+array_push($mydummy,"jashley06");
+array_push($mydummy,"joegie02");
+array_push($mydummy,"jo0101");
+array_push($mydummy,"joe0102");
+
+array_push($mydummy,"joe0103");
+array_push($mydummy,"joe0104");
+array_push($mydummy,"joe0105");
+array_push($mydummy,"joe0107");
+
+array_push($mydummy,"dada2010");
+array_push($mydummy,"dada2111");
+array_push($mydummy,"dada2112");
+array_push($mydummy,"dada2113");
+array_push($mydummy,"max1980");
+array_push($mydummy,"max1981");
+array_push($mydummy,"max1982");
+array_push($mydummy,"xelle2000");
+
+// Regular Colors
+$Black    = "\033[0;30m" ;     //  # Black
+$CRed     = "\033[0;31m" ;     //  # Red
+$Green    = "\033[0;32m" ;       # Green
+$Yellow   = "\033[0;33m" ;      # Yellow
+$Blue     = "\033[0;34m" ;        # Blue
+$Purple   = "\033[0;35m" ;      # Purple
+$Cyan     = "\033[0;36m" ;        # Cyan
+$White    = "\033[0;37m" ;       # White
+
+$ScriptName ="------ MENU --------";
+$Web="https://github.com/reneaparri/lykans";
+
+echo "$White\n#ActiveLYKA";
+echo date("l");
+echo "\n\n";
+
+echo "$White";
+echo "$ScriptName\n";
+echo "$Web\n";
+echo "$Green\nWhat do you want to do today?\n";
+echo "$Yellow\n1. Rate Posts";
+echo "$Cyan\n2. Add Moments";
+echo "$Yellow\n3. Add Posts";
+echo "$Cyan\n4. Check GEMS";
+echo "$Yellow\n5. Harvest GEMS";
+echo "$Green\n6. Exit\n$Yellow\n";
+
+   $inputtask = readline("\nEnter Task No : ");
+
+   switch($inputtask) {
+      case "1" :
+        @system("clear");
+        rateit($mydummy,$myaccounts,$PhoneID,$PhoneModel);
+        exit;
+      case "2" :
+        @system("clear");
+        postit($mydummy,$myaccounts,"moment",$PhoneID,$PhoneModel);
+        exit;        
+      case "3" :
+        @system("clear");
+        postit($mydummy,$myaccounts,"post",$PhoneID,$PhoneModel);
+        exit;
+      case "4" :
+        @system("clear");
+        checkgems($mydummy,$myaccounts,$PhoneID,$PhoneModel);
+        exit;
+      case "5" :
+        @system("clear");
+        harvestgems($mydummy,$myaccounts,$PhoneID,$PhoneModel);
+        exit;
+      case "6" :
+        echo "\nThank you";
+        echo "\nProgram exits\n\n";
+        echo "$White";
+        echo "$ScriptName\n";
+        echo "$Web\n\n";
+        exit;  
+      default :
+        echo "$Cyan\nPls. select Task by entering 1-6";
+        echo "\nProgram exits\n\n";
+        echo "$White";
+        echo "$ScriptName\n";
+        echo "$Web\n\n";
+        exit;  
+
+   } //end of switch..case
+
+function rateit($mydummy,$myaccounts,$PhoneID,$PhoneModel)
+{
+   @system("clear");
+
+   // Regular Colors
+   $Black    = "\033[0;30m" ;     //  # Black
+   $CRed     = "\033[0;31m" ;     //  # Red
+   $Green    = "\033[0;32m" ;       # Green
+   $Yellow   = "\033[0;33m" ;      # Yellow
+   $Blue     = "\033[0;34m" ;        # Blue
+   $Purple   = "\033[0;35m" ;      # Purple
+   $Cyan     = "\033[0;36m" ;        # Cyan
+   $White    = "\033[0;37m" ;       # White
    
-   $ScriptName ="rateit (c) lykapro team 2021";
-   $Web="https://github.com/lykapro/lyka";
+   $ScriptName ="rateit (c) reneaparri";
+   $Web="https://github.com/reneaparri/lykans";
    
    
    echo "$White";
@@ -131,10 +149,8 @@ function rateit($mydummy,$myaccounts)
    echo "$Web\n\n";
    echo "automaxrate dummy+main accounts\n";
 
-
    $usr=0;
    $acct=0;
-   
    
    echo "$White\n#ActiveLYKA";
    echo date("l");
@@ -152,9 +168,6 @@ function rateit($mydummy,$myaccounts)
    array_push($acct2rate,$acct);      
   }
 
-
-
-
            echo "$Yellow\n";
            echo "Input RATERS password";
            echo "$Green\n\n";
@@ -171,9 +184,7 @@ function rateit($mydummy,$myaccounts)
            }
    
    //get acct names to rate
-   
-
-  
+ 
    @system("clear");
    echo "$White\n";
    echo "$ScriptName\n";
@@ -187,8 +198,8 @@ function rateit($mydummy,$myaccounts)
    foreach ($raters as $currentRater) :  //raters
    
        //login to raters
-       $devID=$PhoneID[rand(0,9)];
-       $DevName=$PhoneModel[rand(0,50)];
+       $deviceid=$PhoneID[rand(0,9)];
+       $devicenamemodel=$PhoneModel[rand(0,50)];
        
        echo "$Yellow\n\n-----------------\n";
        echo "Rater       | $currentRater\n";
@@ -204,10 +215,10 @@ function rateit($mydummy,$myaccounts)
        {
        "countryCode": "US",
        "device": {
-       "deviceId"          : "$devID", 
-       "deviceImei"        : "$devID",
-       "deviceModel"       : "$DevName",
-       "deviceName"        : "$DevName",
+       "deviceId"          : "$deviceid", 
+       "deviceImei"        : "$deviceid",
+       "deviceModel"       : "$devicenamemodel",
+       "deviceName"        : "$devicenamemodel",
        "deviceOs"          : "Android",
        "isEmulator"        : false,
        "notificationToken" : "eEBjxYrDSJyFw7N-DpEGNG:APA91bEZnWo-TDdSgVCzQcJq3gHioJtFThNyxw6PsgOCI1JHDzd55yqG-QZwAZRj4pwICrXo5VODiUYom7Fsf4Ql66-CWHFumNA2ynrKEP21bstPBMgwsN-3G_Ek0ZLcoKtVMg5oN6-gz",
@@ -263,7 +274,7 @@ function rateit($mydummy,$myaccounts)
            
                echo ">>[$BeingRated]\n";
                sleep(2);  
-               $urld = "https://profiles.mylykaapps.com/api/v3/profiles/GetProfilePosts?os=android&pageIndex=1&pageSize=16&id=$verifiedaccountID&category=ALL";
+               $urld = "https://profiles.mylykaapps.com/api/v3/profiles/GetProfilePosts?os=android&pageIndex=1&pageSize=50&id=$verifiedaccountID&category=ALL";
                $curld = curl_init($urld);
                curl_setopt($curld, CURLOPT_URL, $urld);
                curl_setopt($curld, CURLOPT_RETURNTRANSFER, true);
@@ -288,8 +299,8 @@ function rateit($mydummy,$myaccounts)
                        $xcount=1;
     
                        do {
-                           $PhoneID[rand(0,9)];
-                           $DevName=$PhoneModel[rand(0,50)];
+                           $deviceid=$PhoneID[rand(0,9)];
+                           $devicenamemodel=$PhoneModel[rand(0,50)];
                        
                            echo "$White";
                            echo "..post$Green #$xcount";
@@ -304,10 +315,10 @@ function rateit($mydummy,$myaccounts)
                         $data = <<<DATA
                     {
                         "device": {
-                        "deviceId"         : "$devID",
-                        "deviceImei"       : "$devID",
-                        "deviceModel"      : "$DevName",
-                        "deviceName"       : "$DevName",
+                        "deviceId"         : "$deviceid",
+                        "deviceImei"       : "$deviceid",
+                        "deviceModel"      : "$devicenamemodel",
+                        "deviceName"       : "$devicenamemodel",
                         "deviceOs"         : "Android",
                         "isEmulator"       : false,
                         "notificationToken": "eEBjxYrDSJyFw7N-DpEGNB:APA91bEZnWo-TRdSgVCzQcJq3gHioJtFThNyxw6PsgOCI1JHDzd55yqG-QZwAZRj4pwICrXo5VDiUYom7Fsf4Ql66-CWHFumNA2ynrKEP21bstPBMgwsN-3G_Ek0ZLcoKtVMg5oN6-pg",
@@ -326,8 +337,10 @@ function rateit($mydummy,$myaccounts)
                         echo "$Cyan";
                         $postmessage=$json->message;
                         
+                    if ($postmessage != '')
+                    {
                         if (strstr($postmessage,'Congratulations')) {
-                            echo " > rated 10 posts \n";
+                            echo " > +0.02 GEMS (rated 10)\n";
                         } elseif ($postmessage=="You already have rated this post.")
                         {
                          echo " > already rated\n";    
@@ -338,10 +351,11 @@ function rateit($mydummy,$myaccounts)
                             echo " > forbidden\n";
                             sleep(2);
                         } elseif (strstr($postmessage,"Post rating")) {
-                           echo " > earnings saved\n";    
+                           echo " > +0.02 GEMS \n";    
                         } else {
                            echo " >$postmessage\n";     
                         }
+                    } else {echo "undefined error";}
 
                         $PostNum++;
                         $xcount++;
@@ -406,7 +420,7 @@ function displaygems($bearer)
 
 ////////////////////////////////////////////////////////////////////////////////////
 
-function harvestgems($mydummy,$myaccounts)
+function harvestgems($mydummy,$myaccounts,$PhoneID,$PhoneModel)
 {
    // Regular Colors
 $Black    = "\033[0;30m" ;     //  # Black
@@ -420,8 +434,8 @@ $White    = "\033[0;37m" ;       # White
    
    $harvestedgems=0;
 
-   $ScriptName ="harvestgems (c) lykapro team 2021";
-   $Web="https://github.com/lykapro/lyka";
+   $ScriptName ="harvestgems (c) reneaparri";
+   $Web="https://github.com/reneaparri/lykans";
    
    echo "$White";
    echo "$ScriptName\n";
@@ -433,11 +447,12 @@ $White    = "\033[0;37m" ;       # White
    echo "\n";
    
    //init dummy array
-   $acct2check = $myaccounts; 
+   $acct2check=[];
+   $acct2check = $mydummy; 
    
-   foreach($mydummy as $acct){
-       array_push($acct2check,"$acct");
-   }
+ //  foreach($mydummy as $acct){
+ //      array_push($acct2check,"$acct");
+ //  }
 
    //should use one password per raters account
    echo "$Yellow\n";
@@ -481,7 +496,10 @@ $White    = "\033[0;37m" ;       # White
    foreach ($acct2check as $activeAcct) {
    
        //Login to each account
-   
+       $deviceid=$PhoneID[rand(0,9)];
+       $devicenamemodel=$PhoneModel[rand(0,80)];
+
+
        $urll = "https://identity.mylykaapps.com/useraccounts/login";
        $curll = curl_init($urll);
        curl_setopt($curll, CURLOPT_URL, $urll);
@@ -493,14 +511,14 @@ $White    = "\033[0;37m" ;       # White
        {
        "countryCode": "US",
        "device": {
-       "deviceId": "7d7e6f904741daea",
-       "deviceImei": "7d7e6f904741daea",
-       "deviceModel": "Tecno Spark 7 Pro",
-       "deviceName": "android",
-       "deviceOs": "Android O_MR1 ",
+       "deviceId": "$deviceid",
+       "deviceImei": "$deviceid",
+       "deviceModel": "$devicenamemodel",
+       "deviceName": "$devicenamemodel",
+       "deviceOs": "Android",
        "isEmulator": false,
        "notificationToken": "eEBjxYrDSJyFw7N-DpEGNG:APA91bEZnWo-TDdSgVCzQcJq3gHioJtFThNyxw6PsgOCI1JHDzd55yqG-QZwAZRj4pwICrXo5VODiUYom7Fsf4Ql66-CWHFumNA2ynrKEP21bstPBMgwsN-3G_Ek0ZLcoKtVMg5oN6-gz",
-       "osVersion": "30"
+       "osVersion": "11"
      },
      "password": "$mainpassword",
      "username": "$activeAcct"
@@ -511,18 +529,21 @@ $White    = "\033[0;37m" ;       # White
        curl_close($curll);
        $jsonn = json_decode($respp);
        $msgn = $jsonn->message;
+    
+    if($msgn=="User logged in")
+    {
        $status = $jsonn->status;
        $verifiedAcct = $jsonn->data->username;
        $bearer = $jsonn->data->token->accessToken;
        $json = json_decode($respp);  
    
-       if ($status == 0) {
+   /*    if ($status == 0) {
          echo "$Purple";
          echo "[$activeAcct] username/password error\n";
        }
-   
+   */
      //pass only when logged successfully
-     if ($status == 1) {
+     //if ($status == 1) {
    
      
        $urlbal2 = "https://wallets.mylykaapps.com/api/v3/wallets/getgems?os=android";
@@ -556,6 +577,9 @@ $White    = "\033[0;37m" ;       # White
        if ($GEMReceiver == $usernamex)
        {
    
+        $deviceid=$PhoneID[rand(0,9)];
+        $devicenamemodel=$PhoneModel[rand(0,80)];
+ 
            $SendGEMURL = "https://wallets.mylykaapps.com/api/v3/wallets/SendGem";
            $curlGEMS = curl_init($SendGEMURL);
            $headerGEMS = array("authorization:Bearer $bearer", "user-agent:Lyka/3.6.65 (com.thingsilikeapp; build:865 Android O_MR1 28))", "deviceos: android", "Content-Type: application/json",);
@@ -566,13 +590,14 @@ $White    = "\033[0;37m" ;       # White
            $databals = '{
              "amount":"' . $TotalGEMS . '",
              "device":{
-               "deviceId":"7d7e6f904741daea",
-               "deviceImei":"7d7e6f904741daea",
-               "deviceModel":"Tecno Spark 7 Pro",
-               "deviceName":"android",
-               "deviceOs":"Android O_MR1",
+               "deviceId":"$deviceid",
+               "deviceImei":"$deviceid",
+               "deviceModel":"$devicenamemodel",
+               "deviceName":"$devicenamemodel",
+               "deviceOs":"Android",
                "isEmulator":false,
-               "notificationToken":"eFEXEC5pTAeXLu7JjIlpNX:APA91bF8I2ZGs8wUNDjpw5lSnzrz8fB652HYMxWBdTGtFRSUaBEd0pHZQvWXAd00ESKVUO_VtYieRQxtfEU7f3RUIHEs5zXGZSVqk5PfbzjZTJQcue0vHYRiEobXHk8JUlTa0nmPCdgR","osVersion":"30"
+               "notificationToken":"eFEXEC5pTAeXLu7JjIlpNX:APA91bF8I2ZGs8wUNDjpw5lSnzrz8fB652HYMxWBdTGtFRSUaBEd0pHZQvWXAd00ESKVUO_VtYieRQxtfEU7f3RUIHEs5zXGZSVqk5PfbzjZTJQcue0vHYRiEobXHk8JUlTa0nmPCdgR",
+               "osVersion":"11"
              },
              "recipientId":' . $uidx . '}';
    
@@ -583,10 +608,11 @@ $White    = "\033[0;37m" ;       # White
            $jsonbals = json_decode($respbals);
            //echo $jsonbals->message;
    
-           echo "$Yellow\n";
-           echo "$activeAcct  GEMS > $TotalGEMS ...$Green sent";
+           echo "$White\n";
+           echo "$activeAcct $Green GEMS > $TotalGEMS ...$Cyan sent";
            $harvestedgems =$harvestedgems+$TotalGEMS;
-         } else {
+       
+        } else {
            echo "$Purple\nerror confirming recipient";
            echo "no GEMS was transferred\n$White\n";
                 }
@@ -599,7 +625,7 @@ $White    = "\033[0;37m" ;       # White
    } //end of loop for each dummy
    
      echo "$White\n============================\n";
-     echo "Total harvested GEMS :$Yellow$harvestedgems\n";
+     echo "Total harvested GEMS :$Yellow $harvestedgems\n";
      echo "$White============================\n\n";
      echo "$ScriptName\n";
      echo "$Web\n\n";
@@ -609,7 +635,7 @@ $White    = "\033[0;37m" ;       # White
 
 //////////////////////////////////////////////////////////////////////////
 
-function checkgems($mydummy,$myaccounts)
+function checkgems($mydummy,$myaccounts,$PhoneID,$PhoneModel)
 {
 
 // Regular Colors
@@ -624,8 +650,8 @@ $White    = "\033[0;37m" ;       # White
 
    $harvestedgems=0;
 
-$ScriptName ="checkgems (c) lykapro team 2021";
-$Web="https://github.com/lykapro/lyka";
+$ScriptName ="checkgems (c) reneaparri";
+$Web="https://github.com/reneaparri/lykans";
 
 
 echo "$White";
@@ -674,6 +700,10 @@ foreach ($acct2check as $activeAcct) {
 
     //Login to each account
 
+    $deviceid=$PhoneID[rand(0,9)];
+    $devicenamemodel=$PhoneModel[rand(0,80)];
+
+
     $urll = "https://identity.mylykaapps.com/useraccounts/login";
     $curll = curl_init($urll);
     curl_setopt($curll, CURLOPT_URL, $urll);
@@ -685,14 +715,14 @@ foreach ($acct2check as $activeAcct) {
     {
     "countryCode": "US",
     "device": {
-    "deviceId": "7d7e6f904741daea",
-    "deviceImei": "7d7e6f904741daea",
-    "deviceModel": "Tecno Spark 7 Pro",
-    "deviceName": "android",
-    "deviceOs": "Android O_MR1 ",
+    "deviceId": "$deviceid",
+    "deviceImei": "$deviceid",
+    "deviceModel": "$devicenamemodel",
+    "deviceName": "$devicenamemodel",
+    "deviceOs": "Android",
     "isEmulator": false,
     "notificationToken": "eEBjxYrDSJyFw7N-DpEGNG:APA91bEZnWo-TDdSgVCzQcJq3gHioJtFThNyxw6PsgOCI1JHDzd55yqG-QZwAZRj4pwICrXo5VODiUYom7Fsf4Ql66-CWHFumNA2ynrKEP21bstPBMgwsN-3G_Ek0ZLcoKtVMg5oN6-gz",
-    "osVersion": "30"
+    "osVersion": "11"
   },
   "password": "$mainpassword",
   "username": "$activeAcct"
@@ -743,8 +773,6 @@ DATA;
 
 } //end of loop for each account
 
-  //rene_wolverine uid = 700002814478
-
   echo "$White============================\n";
   echo "Total GEMS > $Yellow $total\n";
   echo "$White============================\n\n";
@@ -756,7 +784,7 @@ DATA;
 
 ///////////////////////////////////////////////////////////////////////////////
 
-function postit($mydummy,$myaccounts)
+function postit($mydummy,$myaccounts, $posttype,$PhoneID,$PhoneModel)
 {
    @system("clear");
 
@@ -772,21 +800,7 @@ function postit($mydummy,$myaccounts)
    $Cyan     = "\033[0;36m" ;        # Cyan
    $White    = "\033[0;37m" ;       # White
    
-
-   $hash_tags =array("#lykaglobal","#lykaglobalph","#lykagems","#Travel", "#SpreadLove",
-   "#StayBlessed","#Goodluck","#LYKAGlobal","#LYKAEmpoweringLykans","#TravelThainow2019",
-   "#WeRiseByLiftingOthers","#LykaMall","#LykaGems","#LykaPH","#Vivalasvegas",    
-   "#LykaGlobal","#LykaShare","#LykaWorld","#MaxRate","#LykaRetail",
-   "#StayBlessed","#Goodluck","#LYKAGlobal","#LYKAEmpoweringLykans","#TravelThainow2019",
-   "#WeRiseByLiftingOthers","#LykaMall","#LykaGems","#LykaPH","#Vivalasvegas",    
-   "#LykaGlobal","#travelthainow2019","#LykaUltraRater","#LykaMerchants","#travelthainow2019",
-   "#lykaglobal","#lykaglobalph","#lykagems","#Travel", "#SpreadLove",
-   "#StayBlessed","#Goodluck","#LYKAGlobal","#LYKAEmpoweringLykans","#TravelThainow2019",
-   "#LykaGlobal","#LykaMall","#LykaUltraRater","#LykaMerchants","#travelthainow2019",
-   "#lykaglobal","#lykaglobalph","#lykagems","#Travel", "#SpreadLove",
-   "#WeRiseByLiftingOthers","#LykaMall","#LykaGems","#LykaPH","#Vivalasvegas");
-   
-   $hash_tags2 =array("lykaglobal","lykaglobalph","lykagems","Travel", "SpreadLove",
+   $hash_tags =array("lykaglobal","lykaglobalph","lykagems","Travel", "SpreadLove",
    "StayBlessed","Goodluck","LYKAGlobal","LYKAEmpoweringLykans","TravelThainow2019",
    "WeRiseByLiftingOthers","LykaMall","LykaGems","LykaPH","Vivalasvegas",    
    "LykaGlobal","LykaShare","LykaWorld","MaxRate","LykaRetail",
@@ -799,40 +813,15 @@ function postit($mydummy,$myaccounts)
    "lykaglobal","lykaglobalph","lykagems","Travel", "SpreadLove",
    "WeRiseByLiftingOthers","LykaMall","LykaGems","LykaPH","Vivalasvegas");
    
-   $DeviceIDarray=['df0439087259ad38','a5ead687bdb3729c','87a87fe99d0039a5'];
-   array_push($DeviceIDarray,'7d7e6f904741daea');
-   array_push($DeviceIDarray,'9f78dab798ab0324');
-   array_push($DeviceIDarray,'83d23b76250d2a97');
-   ARRAY_push($DeviceIDarray,'7ae21b1182e2a323');
-   array_push($DeviceIDarray,'29b3e709883d7321');
-   array_push($DeviceIDarray,'c51e10db899a4cc4');
-   array_push($DeviceIDarray,'47db99101c533bc5');
-   
-   $DeviceArray=array("iPhone 4","iPhone 4S","iPhone 5","iPhone 5c","iPhone 5s",
-   "iPhone 6","iPhone 6 Plus","iPhone 6s","iPhone 6s Plus",
-   "iPhone SE (1st generation)","iPhone 7","iPhone 7 Plus","iPhone 8",
-   "iPhone 8 Plus","iPhone X","iPhone XR","iPhone XS","iPhone XS Max",
-   "iPhone 11","iPhone 11 Pro","iPhone 11 Pro Max","iPhone SE","iPhone 12 mini","iPhone 12","iPhone 12 Pro",
-   "Tecno Spark 7","Tecno Spark 7 Pro","Vivo V11i","Vivo V11","Vivo V11 Pro",
-   "Oppo A94","Oppo A12","Vivo Z10","Samsung Galaxy S20","Vivo Y81","Vivo Nex S","Vivo Nex A","Vivo Y75s","Vivo Y83",
-   "Vivo X21i","Vivo Z1","Vivo Y53i","Nokia 5","Nokia 6","Vivo Y71","Vivo X21 UD","Vivo X21","Vivo V9",
-   "Vivo X20 Plus UD","Vivo Y75","Vivo V7","Samsung Galaxy S9","Vivo X20 Plus","Vivo X20","Vivo V7+",
-   "Vivo Y69","Vivo V5s","LG G+","Vivo Y66","Sony Xperia 10","Nokia 3315","Vivo Y55s","Tecno Spark 6 Air","Tecno Spark 6 Go","Vivo Xplay6",
-   "HTC U20 5G","Vivo X9","Google Pixel 5","OnePlus 9","OnePlus 10","Infinix Hot S10","Vivo X7","Vivo X6S Plus",
-   "Vivo X6S","Vivo Y31L","Oppo A2","Oppo A11","Vivo Xplay5 Elite","Vivo Y51L","Vivo X6 Plus",
-   "Vivo X6","Vivo Y51","Vivo Y27L","Vivo Y15S","Vivo V1Max","Vivo V1","Vivo X5Pro","Vivo X5Max+",
-   "Vivo X5S L","Vivo X Shot","Vivo X3S","Vivo Y15","Vivo Y22","Vivo X5Max","Nokia 3210");
-   
-   $ScriptName ="addposts (c) lykapro team 2021";
-   $Web="https://github.com/lykapro/lyka";
+   $ScriptName ="add $posttype (c) reneaparri";
+   $Web="https://github.com/reneaparri/lykans";
    
    $acct=0;
    
    echo "$White";
    echo "$ScriptName\n";
    echo "$Web\n\n";
-   echo "add posts to your account\n";
-   echo "no hidden codes\n";
+   echo "add $posttype to your account\n";
    
    echo "$White\n#ActiveLYKA";
    echo date("l");
@@ -869,35 +858,29 @@ function postit($mydummy,$myaccounts)
    }
    
    echo "$White";
-   echo "\nNumber of posts to add (default 10)?\n";
+   echo "\nNumber of $posttype to add (default 10)?\n";
    $postcount=readline("Count : ");
    
    if ($postcount =='') {
        $postcount=10;
    }
    
-   echo "$Yellow";
-   echo "\nPosts title e.g. #LYKAglobal\n";
-   $posttitle=readline("Title : ");
-   
    @system("clear");
    echo "$White\n";
    echo "$ScriptName\n";
    echo "$Web\n$Yellow\n";
-   echo "time to add posts to your account\n";
+   echo "time to add $posttype to your account\n";
    echo "fasten your seatbelt\n";
    sleep(2);
    
    
    foreach ($acct2post as $currentUser) {
    
-       $devID=$DeviceIDarray[rand(0,9)];
-       $DevName=$DeviceArray[rand(0,80)];
+       $deviceid=$PhoneID[rand(0,9)];
+       $devicenamemodel=$PhoneModel[rand(0,80)];
    
    echo "$White\n";
    echo "Account Details\n\n";
-   //echo "Phone Name  | $DevName\n";
-   //echo "Phone ID    | $devID\n";
    echo "Username    | $currentUser\n";
    echo "$Cyan";
    
@@ -913,10 +896,10 @@ function postit($mydummy,$myaccounts)
    {
    "countryCode": "US",
    "device": {
-   "deviceId": "$devID",
-   "deviceImei": "$devID",
-   "deviceModel": "$DevName",
-   "deviceName": "$DevName",
+   "deviceId": "$deviceid",
+   "deviceImei": "$deviceid",
+   "deviceModel": "$devicenamemodel",
+   "deviceName": "$devicenamemodel",
    "deviceOs": "Android",
    "isEmulator": false,
    "notificationToken": "eEBjxYrDSJyFw7N-DpEGNG:APA91bEZnWo-TDdSgVCzQcJq3gHioJtFThNyxw6PsgOCI1JHDzd55yqG-QZwAZRj4pwICrXo5VODiUYom7Fsf4Ql66-CWHFumNA2ynrKEP21bstPBMgwsN-3G_Ek0ZLcoKtVMg5oN6-gz",
@@ -954,22 +937,18 @@ function postit($mydummy,$myaccounts)
     do {  
        
       echo "$White";
-      echo "adding posts #$postloop  > "; 
+      echo "..$posttype #$postloop > "; 
       
-      $device_id = $DeviceIDarray[rand(0,9)];
+      $device_id = $deviceID[rand(0,9)];
    
       echo "$Cyan";
       
-      if ($posttitle == "" ) {
-           $title_content=$hash_tags[rand(0,57)];
-      } else {
-           $title_content=$posttitle;
-      }
-      
-      $xhash=$hash_tags2[rand(0,57)];
+        $title_content=$hash_tags[rand(0,57)];
+        $xhash=$hash_tags[rand(0,57)];
    
-   
-      addPosts($vuser, $bearer, $device_id, $title_content, $xhash);
+      postmoments($vuser, $bearer, $device_id, $title_content, $xhash, $posttype);
+
+//      addPosts($vuser, $bearer, $device_id, $title_content, $xhash);
       
       echo "\n";
       $postloop++;
@@ -977,7 +956,7 @@ function postit($mydummy,$myaccounts)
    } while ($postloop !=$postcount+1);
    
    echo "$Yellow";
-   echo "\nposts has been added to [$currentUser]\n\n";
+   echo "\n$posttype has been added to [$currentUser]\n\n";
    echo "$ScriptName\n";
    echo "$Web\n\n";
    
@@ -992,11 +971,10 @@ function postit($mydummy,$myaccounts)
    
    
    echo "\n$Green";
-   echo "addposts summary\n";
+   echo "Summary\n";
    echo "Username    | $currentUser\n";
-   echo "Posts added | $postcount\n";
    displaygems($bearer);
-   echo "=============================\n";
+   echo "--------------------------------\n";
    sleep(2);
    
    } //end of loop for x username
@@ -1010,630 +988,217 @@ function postit($mydummy,$myaccounts)
 } //end of postit
 //////////////////////////////////////////////////////////////////////////////////
 
-function addPosts($currentUser, $bearer, $device_id, $contents, $xhash) {
+function postmoments($currentUser, $bearer, $device_id, $contents, $xhash, $posttype) {
 
-   $currentUser_id = getUserId($device_id, $bearer);
-   $device_id = $device_id;
-
-   $uploadLegacy = "https://media.mylykaapps.com/api/v1/media/social/multi-upload-url";
-   $uploadPay = <<<DATA
-       {"category":"post",
-        "clientId":"$currentUser_id",
-        "files":[{
-            "fileName":"https://github.com/maximum001/images/blob/main/p1.jpeg", 
-            "mediaType":"image"}]
-        }
-   DATA; 
-   $uploadLegPost = postX($uploadLegacy,$uploadPay,$bearer);
+    $currUsrID = getUserId($device_id, $bearer);
  
-   if($uploadLegPost->data){
-       $mediaID = $uploadLegPost->data[0]->mediaId;
-
-       $amznToken = "https://media.mylykaapps.com/api/v1/access/aws/media-token/$currentUser_id";
-       $firstGet = getX($amznToken,$device_id,$bearer);
-
-       if($firstGet->data){
-           $amzIDid = $firstGet->data->identityId;
-           $amzIDtoken = $firstGet->data->token; 
-
-           $postURL = "https://cognito-identity.ap-southeast-1.amazonaws.com/";
-           $postHeader =  array(
-           "Content-Type: application/x-amz-json-1.1",
-           "Accept-encoding: indentity",
-           "X-Amz-Target: AWSCognitoIdentityService.GetCredentialsForIdentity",
-           "user-agent: aws-sdk-android/2.22.4 Linux/3.18.140-gb765813d2c04 Dalvik/2.1.0/0 en_US") ;
-           $amndata = <<<DATA
-                   {"Logins": {
-                       "cognito-identity.amazonaws.com": "$amzIDtoken"},
-                           "IdentityId": "$amzIDid"}
-                   DATA; 
-           $postCurl = curl_init($postURL);
-           curl_setopt($postCurl, CURLOPT_URL, $postURL);
-           curl_setopt($postCurl, CURLOPT_POST, true);
-           curl_setopt($postCurl, CURLOPT_RETURNTRANSFER, true);
-           curl_setopt($postCurl, CURLOPT_HTTPHEADER, $postHeader);
-           curl_setopt($postCurl, CURLOPT_POSTFIELDS, $amndata);
-           $postResp = curl_exec($postCurl);
-           curl_close($postCurl);
-           $postjson = json_decode($postResp);
-           if($postjson->Credentials){
-               $sessToken = $postjson->Credentials->SessionToken;
-               $aws_access_key_id = $postjson->Credentials->AccessKeyId;
-               $aws_secret_access_key = $postjson->Credentials->SecretKey;
-
-               //AWS Process
-               $bucket_name = 'lyka-legacy-images-input';
-               $aws_region = 'ap-southeast-1';
-               $host_name = $bucket_name . '.s3.amazonaws.com';
-               $content = "0";
-               $content_title = $mediaID;
-               $aws_service_name = 's3';
-               $timestamp = gmdate('Ymd\THis\Z');
-               $date = gmdate('Ymd');
-               $request_headers = array();
-               $request_headers['x-amz-date'] = $timestamp;
-               $request_headers['Host'] = $host_name;
-               $request_headers['x-amz-security-token'] = $sessToken;
-               $request_headers['x-amz-content-sha256'] = hash('sha256', $content);
-               ksort($request_headers);
-
-               $canonical_headers = [];
-               foreach($request_headers as $key => $value) {
-                   $canonical_headers[] = strtolower($key) . ":" . $value;
-               }
-               $canonical_headers = implode("\n", $canonical_headers);
-
-               // Signed headers
-               $signed_headers = [];
-               foreach($request_headers as $key => $value) {
-                   $signed_headers[] = strtolower($key);
-               }
-               $signed_headers = implode(";", $signed_headers);
-
-               // Cannonical request 
-               $canonical_request = [];
-               $canonical_request[] = "PUT";
-               $canonical_request[] = "/" . $content_title;
-               $canonical_request[] = "";
-               $canonical_request[] = $canonical_headers;
-               $canonical_request[] = "";
-               $canonical_request[] = $signed_headers;
-               $canonical_request[] = hash('sha256', $content);
-               $canonical_request = implode("\n", $canonical_request);
-               $hashed_canonical_request = hash('sha256', $canonical_request);
-
-               // AWS Scope
-               $scope = [];
-               $scope[] = $date;
-               $scope[] = $aws_region;
-               $scope[] = $aws_service_name;
-               $scope[] = "aws4_request";
-
-               // String to sign
-               $string_to_sign = [];
-               $string_to_sign[] = "AWS4-HMAC-SHA256"; 
-               $string_to_sign[] = $timestamp; 
-               $string_to_sign[] = implode('/', $scope);
-               $string_to_sign[] = $hashed_canonical_request;
-               $string_to_sign = implode("\n", $string_to_sign);
-
-               // Signing key
-               $kSecret = 'AWS4' . $aws_secret_access_key;
-               $kDate = hash_hmac('sha256', $date, $kSecret, true);
-               $kRegion = hash_hmac('sha256', $aws_region, $kDate, true);
-               $kService = hash_hmac('sha256', $aws_service_name, $kRegion, true);
-               $kSigning = hash_hmac('sha256', 'aws4_request', $kService, true);
-
-               // Signature
-               $signature = hash_hmac('sha256', $string_to_sign, $kSigning);
-
-               // Authorization
-               $authorization = [
-                   'Credential=' . $aws_access_key_id . '/' . implode('/', $scope),
-                   'SignedHeaders=' . $signed_headers,
-                   'Signature=' . $signature
-               ];
-               $authorization = 'AWS4-HMAC-SHA256' . ' ' . implode( ',', $authorization);
-
-               // Curl headers
-               $curl_headers = [ 'Authorization: ' . $authorization ];
-               foreach($request_headers as $key => $value) {
-                   $curl_headers[] = $key . ": " . $value;
-               }
-
-               $url = 'https://' . $host_name . '/' . $content_title;
-               $ch = curl_init($url);
-               curl_setopt($ch, CURLOPT_HEADER, false);
-               curl_setopt($ch, CURLOPT_HTTPHEADER, $curl_headers);
-               curl_setopt($ch, CURLOPT_RETURNTRANSFER, false);
-               curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-               curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-               curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
-               curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
-               curl_exec($ch);
-               $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-               // echo $http_code;
-               if ($http_code != 200) {
-                   echo "failed\n";
-               }
-               
-               $delURL = "https://lyka-legacy-images-input.s3.ap-southeast-1.amazonaws.com/".$mediaID;
-               $delHeader = array(
-                   "x-clientid: $device_id",
-                   "x-amz-date: $timestamp",
-                   "x-amz-content-sha256: STREAMING-AWS4-HMAC-SHA256-PAYLOAD",
-                   "Authorization: $authorization"
-               );
-               $deleteCurlx = curl_init($delURL);
-               curl_setopt($deleteCurlx, CURLOPT_URL, $delURL);
-               curl_setopt($deleteCurlx, CURLOPT_RETURNTRANSFER, true);
-               curl_setopt($deleteCurlx, CURLOPT_CUSTOMREQUEST, "PUT");
-               curl_setopt($deleteCurlx, CURLOPT_HTTPHEADER, $delHeader);
-               $deleteResp = curl_exec($deleteCurlx);
-               curl_close($deleteCurlx);
-
-               $uploaded_count = 0;
-               $upload_attempt = 0;
-               while ($uploaded_count < 1) {
-
-
-                   sleep(0);
-
-                   //echo " $contents $xhash ";
-
-                   $uploadPost = "https://posting.mylykaapps.com/api/v3/posts/AddImagePost";
-                   $post = postX($uploadPost, 
-                   payload($device_id,
-                   '"files":[{
-                    "imageURL":"https://www.w3schools.com/Css/img_lights.jpg",
-                    "height":1024,
-                    "key":"'.$mediaID.'", 
-                    "RemoteStorage":"lyka-legacy-images-input" ,
-                    "type":"image","width":768}],
-                    "isHighlight":false,
-                    "isSharedLink":false,
-                    "mediaTags":"[[]]",
-                    title:"#ActiveLYKA'.date("l").'",
-                    hashtags:"'.$xhash.'",
-                    content: "'.$contents.'"'),
-                    $bearer);
-                   $response_message = $post->message;
-                   //echo "$response_message.";
-                   if (strstr($response_message, 'Post saved')) {
-                     echo "success";  
-                     
-                     $uploaded_count++;
-                       $upload_attempt = 0;
-                   } else {
-                       echo "failed. retrying. \n";
-                       $upload_attempt++;
-                       if ($upload_attempt >= 5) {
-                           break;
-                       }
-                   }
-               }      
-           }
-       }
-   } else {
-   }
-}  //end of addposts
-/////////////////////////////////////////////////////////////////////////////
-
-function moments($mydummy,$myaccounts)
-{
-
-   @system("clear");
-
-//Set font color
-
-// Regular Colors
-$Black    = "\033[0;30m" ;     //  # Black
-$CRed     = "\033[0;31m" ;     //  # Red
-$Green    = "\033[0;32m" ;       # Green
-$Yellow   = "\033[0;33m" ;      # Yellow
-$Blue     = "\033[0;34m" ;        # Blue
-$Purple   = "\033[0;35m" ;      # Purple
-$Cyan     = "\033[0;36m" ;        # Cyan
-$White    = "\033[0;37m" ;       # White
-# Bold
-$BBlack   = "\033[1;30m" ;      # Black
-$BRed     = "\033[1;31m" ;        # Red
-$BGreen   = "\033[1;32m" ;      # Green
-$BYellow  = "\033[1;33m" ;     # Yellow
-$BBlue    = "\033[1;34m" ;       # Blue
-$BPurple  = "\033[1;35m" ;     # Purple
-$BCyan    = "\033[1;36m" ;       # Cyan
-$BWhite   = "\033[1;37m" ;      # White
-
-$hash_tags =array("#lykaglobal","#lykaglobalph","#lykagems","#Travel", "#SpreadLove",
-"#StayBlessed","#Goodluck","#LYKAGlobal","#LYKAEmpoweringLykans","#TravelThainow2019",
-"#WeRiseByLiftingOthers","#LykaMall","#LykaGems","#LykaPH","#Vivalasvegas",    
-"#LykaGlobal","#LykaShare","#LykaWorld","#MaxRate","#LykaRetail",
-"#StayBlessed","#Goodluck","#LYKAGlobal","#LYKAEmpoweringLykans","#TravelThainow2019",
-"#WeRiseByLiftingOthers","#LykaMall","#LykaGems","#LykaPH","#Vivalasvegas",    
-"#LykaGlobal","#travelthainow2019","#LykaUltraRater","#LykaMerchants","#travelthainow2019",
-"#lykaglobal","#lykaglobalph","#lykagems","#Travel", "#SpreadLove",
-"#StayBlessed","#Goodluck","#LYKAGlobal","#LYKAEmpoweringLykans","#TravelThainow2019",
-"#LykaGlobal","#LykaMall","#LykaUltraRater","#LykaMerchants","#travelthainow2019",
-"#lykaglobal","#lykaglobalph","#lykagems","#Travel", "#SpreadLove",
-"#WeRiseByLiftingOthers","#LykaMall","#LykaGems","#LykaPH","#Vivalasvegas");
-
-$DeviceIDarray=['df0439087259ad38','a5ead687bdb3729c','87a87fe99d0039a5'];
-array_push($DeviceIDarray,'7d7e6f904741daea');
-array_push($DeviceIDarray,'9f78dab798ab0324');
-array_push($DeviceIDarray,'83d23b76250d2a97');
-ARRAY_push($DeviceIDarray,'7ae21b1182e2a323');
-array_push($DeviceIDarray,'29b3e709883d7321');
-array_push($DeviceIDarray,'c51e10db899a4cc4');
-array_push($DeviceIDarray,'47db99101c533bc5');
-
-$DeviceArray=array("iPhone 4","iPhone 4S","iPhone 5","iPhone 5c","iPhone 5s",
-"iPhone 6","iPhone 6 Plus","iPhone 6s","iPhone 6s Plus",
-"iPhone SE (1st generation)","iPhone 7","iPhone 7 Plus","iPhone 8",
-"iPhone 8 Plus","iPhone X","iPhone XR","iPhone XS","iPhone XS Max",
-"iPhone 11","iPhone 11 Pro","iPhone 11 Pro Max","iPhone SE","iPhone 12 mini","iPhone 12","iPhone 12 Pro",
-"Tecno Spark 7","Tecno Spark 7 Pro","Vivo V11i","Vivo V11","Vivo V11 Pro",
-"Oppo A94","Oppo A12","Vivo Z10","Samsung Galaxy S20","Vivo Y81","Vivo Nex S","Vivo Nex A","Vivo Y75s","Vivo Y83",
-"Vivo X21i","Vivo Z1","Vivo Y53i","Nokia 5","Nokia 6","Vivo Y71","Vivo X21 UD","Vivo X21","Vivo V9",
-"Vivo X20 Plus UD","Vivo Y75","Vivo V7","Samsung Galaxy S9","Vivo X20 Plus","Vivo X20","Vivo V7+",
-"Vivo Y69","Vivo V5s","LG G+","Vivo Y66","Sony Xperia 10","Nokia 3315","Vivo Y55s","Tecno Spark 6 Air","Tecno Spark 6 Go","Vivo Xplay6",
-"HTC U20 5G","Vivo X9","Google Pixel 5","OnePlus 9","OnePlus 10","Infinix Hot S10","Vivo X7","Vivo X6S Plus",
-"Vivo X6S","Vivo Y31L","Oppo A2","Oppo A11","Vivo Xplay5 Elite","Vivo Y51L","Vivo X6 Plus",
-"Vivo X6","Vivo Y51","Vivo Y27L","Vivo Y15S","Vivo V1Max","Vivo V1","Vivo X5Pro","Vivo X5Max+",
-"Vivo X5S L","Vivo X Shot","Vivo X3S","Vivo Y15","Vivo Y22","Vivo X5Max","Nokia 3210");
-
-$ScriptName ="addmoments (c) lykapro team 2021";
-$Web="https://github.com/lykapro/lyka";
-
-echo "$White";
-echo "$ScriptName\n";
-echo "$Web\n\n";
-echo "add moments to your account\n";
-echo "no hidden codes\n";
-
-echo "$White\n#ActiveLYKA";
-echo date("l");
-echo "\n\n";
-
-$acct2post = $myaccounts; 
-   
-foreach($mydummy as $acct){
-    array_push($acct2post,"$acct");
-}
-
-
-
-echo "$Green\n";
-echo "*Pls. use same password for your accounts*\n";
-
-echo "$White";
-$mainpassword=readline("\nPassword : ");
-if ($mainpassword == '')
-{
-    echo "$Green";
-    echo "\nno password was entered\n";
-    echo "password is needed to proceed\n\n";
-    echo "$White";
-    echo "$ScriptName\n";
-    echo "$Web\n\n";
-    exit;
-}
-
-echo "$White";
-echo "\nNumber of moments to add (default 10)?\n";
-$postcount=readline("Count : ");
-
-if ($postcount =='') {
-    $postcount=10;
-}
-
-@system("clear");
-echo "$White\n";
-echo "$ScriptName\n";
-echo "$Web\n$Green\n";
-echo "are you ready to post your moments?\n";
-echo "let's go!!!\n";
-sleep(2);
-
-foreach ($acct2post as $currentUser) {
-
-echo "$White\n";
-
-$devID=$DeviceIDarray[rand(0,9)];
-$DevName=$DeviceArray[rand(0,80)];
-
-echo "$White";
-echo "Account to addmoments\n\n";
-echo "Username    | $currentUser\n";
-
-echo "$Cyan";
-
-//Login to account
-$urll = "https://identity.mylykaapps.com/useraccounts/login";
-$curll = curl_init($urll);
-curl_setopt($curll, CURLOPT_URL, $urll);
-curl_setopt($curll, CURLOPT_POST, true);
-curl_setopt($curll, CURLOPT_RETURNTRANSFER, true);
-$headerss = array("Content-Type: application/json", "user-agent:Lyka/3.6.65 (com.thingsilikeapp; build:865 Android R 30)");
-curl_setopt($curll, CURLOPT_HTTPHEADER, $headerss);
-$DeviceInfo = <<<DATA
-{
-"countryCode": "US",
-"device": {
-"deviceId": "$devID",
-"deviceImei": "$devID",
-"deviceModel": "$DevName",
-"deviceName": "android",
-"deviceOs": "Android R",
-"isEmulator": false,
-"notificationToken": "eEBjxYrDSJyFw7N-DpEGNG:APA91bEZnWo-TDdSgVCzQcJq3gHioJtFThNyxw6PsgOCI1JHDzd55yqG-QZwAZRj4pwICrXo5VODiUYom7Fsf4Ql66-CWHFumNA2ynrKEP21bstPBMgwsN-3G_Ek0ZLcoKtVMg5oN6-gz",
-"osVersion": "30"
-},
-"password": "$mainpassword",
-"username": "$currentUser"
-}
-DATA;
-
-curl_setopt($curll, CURLOPT_POSTFIELDS, $DeviceInfo);
-$respp = curl_exec($curll);
-curl_close($curll);
-$jsonn = json_decode($respp);
-$msgn = $jsonn->message;
-
-if ($msgn == "User logged in") {
-
-$status = $jsonn->status;
-$vuser = $jsonn->data->username;
-$bearer = $jsonn->data->token->accessToken;
-//sleep(1);
-
-//echo "$msgn\n";
-//exit;
-
-      echo "$White";
-      displaygems($bearer);
-      echo "$Cyan";
-      echo "$msgn\n\n";
-
-
-   $postloop=1;   
-//for ($postloop=1; $postloop<12; $postloop++) {
-do {    
-   $title_content=$hash_tags[rand(0,57)];
-   $xhash=$hash_tags[rand(0,57)];
-   $device_id = $DeviceIDarray[rand(0,9)];
-   
-   echo "$White";
-   echo "> posting moments #$postloop > ";
-   echo "$Yellow"; 
-   addMoments($vuser, $bearer, $device_id);
-   echo "\n";
-   $postloop++;
-
-} while ($postloop !=$postcount+1);//end of for loop
-
-echo "$White";
-echo "\nmoments have been added to [$currentUser]\n\n";
-echo "$ScriptName\n";
-echo "$Web\n\n";
-
-
-} else {
-    echo "$Yellow";
-    //echo " Error : username/password does not match.\n";
-    echo "$msgn\n";
-    echo "$White";
-    break;
-} //end of status==1   
-
-echo "$Green";
-echo "addmoments summary\n\n";
-echo "Username    | $currentUser\n";
-echo "New Moments | $postcount\n";
-displaygems($bearer);
-echo "========================\n\n";
-sleep(2);
-
-} //end of loop for x username
-
-echo "\n";
-echo "$White";
-echo "$ScriptName\n";
-echo "$Web\n\n";
-
-}  //end of moments
-
-//////////////////////////////////////////////////////////////////////////////
-
-function addMoments($currentUser, $bearer, $device_id) {
-   
-   $currentUsrID = getUserId($device_id, $bearer);
-
-   $uploadLegacy = "https://media.mylykaapps.com/api/v1/media/social/multi-upload-url";
-   $uploadPay = <<<DATA
-       {"category":"moment","clientId":"$currentUsrID","files":[{"fileName":"p5.jpeg", "mediaType":"image"}]}
-   DATA; 
-   $uploadLegPost = postX($uploadLegacy,$uploadPay,$bearer);
-
-   if($uploadLegPost->data){
-       $mediaID = $uploadLegPost->data[0]->mediaId;
-
-       $amznToken = "https://media.mylykaapps.com/api/v1/access/aws/media-token/$currentUsrID";
-       $firstGet = getX($amznToken,$device_id,$bearer);
-
-       if($firstGet->data){
-           $amzIDid = $firstGet->data->identityId;
-           $amzIDtoken = $firstGet->data->token; 
-
-           $postURL = "https://cognito-identity.ap-southeast-1.amazonaws.com/";
-           $postHeader =  array(
-           "Content-Type: application/x-amz-json-1.1",
-           "Accept-encoding: indentity",
-           "X-Amz-Target: AWSCognitoIdentityService.GetCredentialsForIdentity",
-           "user-agent: aws-sdk-android/2.22.4 Linux/3.18.140-gb765813d2c04 Dalvik/2.1.0/0 en_US") ;
-           $amndata = <<<DATA
-                   {"Logins": {
-                       "cognito-identity.amazonaws.com": "$amzIDtoken"},
-                           "IdentityId": "$amzIDid"}
-                   DATA; 
-           $postCurl = curl_init($postURL);
-           curl_setopt($postCurl, CURLOPT_URL, $postURL);
-           curl_setopt($postCurl, CURLOPT_POST, true);
-           curl_setopt($postCurl, CURLOPT_RETURNTRANSFER, true);
-           curl_setopt($postCurl, CURLOPT_HTTPHEADER, $postHeader);
-           curl_setopt($postCurl, CURLOPT_POSTFIELDS, $amndata);
-           $postResp = curl_exec($postCurl);
-           curl_close($postCurl);
-           $postjson = json_decode($postResp);
-           if($postjson->Credentials){
-               $sessToken = $postjson->Credentials->SessionToken;
-               $aws_access_key_id = $postjson->Credentials->AccessKeyId;
-               $aws_secret_access_key = $postjson->Credentials->SecretKey;
-
-               //AWS Process
-               $bucket_name = 'lyka-legacy-images-input';
-               $aws_region = 'ap-southeast-1';
-               $host_name = $bucket_name . '.s3.amazonaws.com';
-               $content = "0";
-               $content_title = $mediaID;
-               $aws_service_name = 's3';
-               $timestamp = gmdate('Ymd\THis\Z');
-               $date = gmdate('Ymd');
-               $request_headers = array();
-               $request_headers['x-amz-date'] = $timestamp;
-               $request_headers['Host'] = $host_name;
-               $request_headers['x-amz-security-token'] = $sessToken;
-               $request_headers['x-amz-content-sha256'] = hash('sha256', $content);
-               ksort($request_headers);
-
-               $canonical_headers = [];
-               foreach($request_headers as $key => $value) {
-                   $canonical_headers[] = strtolower($key) . ":" . $value;
-               }
-               $canonical_headers = implode("\n", $canonical_headers);
-
-               // Signed headers
-               $signed_headers = [];
-               foreach($request_headers as $key => $value) {
-                   $signed_headers[] = strtolower($key);
-               }
-               $signed_headers = implode(";", $signed_headers);
-
-               // Cannonical request 
-               $canonical_request = [];
-               $canonical_request[] = "PUT";
-               $canonical_request[] = "/" . $content_title;
-               $canonical_request[] = "";
-               $canonical_request[] = $canonical_headers;
-               $canonical_request[] = "";
-               $canonical_request[] = $signed_headers;
-               $canonical_request[] = hash('sha256', $content);
-               $canonical_request = implode("\n", $canonical_request);
-               $hashed_canonical_request = hash('sha256', $canonical_request);
-
-               // AWS Scope
-               $scope = [];
-               $scope[] = $date;
-               $scope[] = $aws_region;
-               $scope[] = $aws_service_name;
-               $scope[] = "aws4_request";
-
-               // String to sign
-               $string_to_sign = [];
-               $string_to_sign[] = "AWS4-HMAC-SHA256"; 
-               $string_to_sign[] = $timestamp; 
-               $string_to_sign[] = implode('/', $scope);
-               $string_to_sign[] = $hashed_canonical_request;
-               $string_to_sign = implode("\n", $string_to_sign);
-
-               // Signing key
-               $kSecret = 'AWS4' . $aws_secret_access_key;
-               $kDate = hash_hmac('sha256', $date, $kSecret, true);
-               $kRegion = hash_hmac('sha256', $aws_region, $kDate, true);
-               $kService = hash_hmac('sha256', $aws_service_name, $kRegion, true);
-               $kSigning = hash_hmac('sha256', 'aws4_request', $kService, true);
-
-               // Signature
-               $signature = hash_hmac('sha256', $string_to_sign, $kSigning);
-
-               // Authorization
-               $authorization = [
-                   'Credential=' . $aws_access_key_id . '/' . implode('/', $scope),
-                   'SignedHeaders=' . $signed_headers,
-                   'Signature=' . $signature
-               ];
-               $authorization = 'AWS4-HMAC-SHA256' . ' ' . implode( ',', $authorization);
-
-               // Curl headers
-               $curl_headers = [ 'Authorization: ' . $authorization ];
-               foreach($request_headers as $key => $value) {
-                   $curl_headers[] = $key . ": " . $value;
-               }
-
-               $url = 'https://' . $host_name . '/' . $content_title;
-               $ch = curl_init($url);
-               curl_setopt($ch, CURLOPT_HEADER, false);
-               curl_setopt($ch, CURLOPT_HTTPHEADER, $curl_headers);
-               curl_setopt($ch, CURLOPT_RETURNTRANSFER, false);
-               curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-               curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-               curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
-               curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
-               curl_exec($ch);
-               $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-               // echo $http_code;
-               if ($http_code != 200) {
-                   echo "failed";
-               }
-               
-               $delURL = "https://lyka-legacy-images-input.s3.ap-southeast-1.amazonaws.com/".$mediaID;
-               $delHeader = array(
-                   "x-clientid: $device_id",
-                   "x-amz-date: $timestamp",
-                   "x-amz-content-sha256: STREAMING-AWS4-HMAC-SHA256-PAYLOAD",
-                   "Authorization: $authorization"
-               );
-               $deleteCurlx = curl_init($delURL);
-               curl_setopt($deleteCurlx, CURLOPT_URL, $delURL);
-               curl_setopt($deleteCurlx, CURLOPT_RETURNTRANSFER, true);
-               curl_setopt($deleteCurlx, CURLOPT_CUSTOMREQUEST, "PUT");
-               curl_setopt($deleteCurlx, CURLOPT_HTTPHEADER, $delHeader);
-               $deleteResp = curl_exec($deleteCurlx);
-               curl_close($deleteCurlx);
-
-               $uploaded_count = 0;
-               $upload_attempt = 0;
-               while ($uploaded_count < 1) {
-                   sleep(1);
-                   $uploadMoment = "https://momenting.mylykaapps.com/api/v3/moments/AddImageMoment";
-                   $momnts = postX($uploadMoment, 
-                   payload($device_id,
-                   '"files":[{
-                       "height":2081,
-                       "key":"'.$mediaID.'", 
-                       "RemoteStorage":"lyka-legacy-images-input" ,
-                       "type":"image",
-                       "width":1079}]'),
-                        $bearer);
-                   $response_message = $momnts->message;
-                   if( $response_message == "Moment retrieved."){
-                       echo "success";
-                       $uploaded_count++;
-                       $upload_attempt = 0;
-                   } else {
-                       echo "failed. retrying\n";
-                       $upload_attempt++;
-                       if ($upload_attempt >= 5) {
-                           break;
-                       }
-                   }
-               }      
-           }
-       }
-   } else {
-       echo "\n Error getting moments server data.\n";
-   }
-} //end of addmoments
+    $uploadLegacy = "https://media.mylykaapps.com/api/v1/media/social/multi-upload-url";
+    
+    $uploadPay = <<<DATA
+        {"category":"$posttype",
+         "clientId":"$currUsrID",
+         "files":[{
+             "fileName":"https://github.com/maximum001/images/blob/main/p1.jpeg", 
+             "mediaType":"image"}]        }
+    DATA; 
+    
+    $uploadLegPost = postX($uploadLegacy,$uploadPay,$bearer);
+  
+    if($uploadLegPost->data){
+        $mediaID = $uploadLegPost->data[0]->mediaId;
+ 
+        $amznToken = "https://media.mylykaapps.com/api/v1/access/aws/media-token/$currUsrID";
+        $firstGet = getX($amznToken,$device_id,$bearer);
+ 
+        if($firstGet->data){
+            $amzIDid = $firstGet->data->identityId;
+            $amzIDtoken = $firstGet->data->token; 
+ 
+            $postURL = "https://cognito-identity.ap-southeast-1.amazonaws.com/";
+            $postHeader =  array(
+            "Content-Type: application/x-amz-json-1.1",
+            "Accept-encoding: indentity",
+            "X-Amz-Target: AWSCognitoIdentityService.GetCredentialsForIdentity",
+            "user-agent: aws-sdk-android/2.22.4 Linux/3.18.140-gb765813d2c04 Dalvik/2.1.0/0 en_US") ;
+            $amndata = <<<DATA
+                    {"Logins": {
+                        "cognito-identity.amazonaws.com": "$amzIDtoken"},
+                            "IdentityId": "$amzIDid"}
+                    DATA; 
+            $postCurl = curl_init($postURL);
+            curl_setopt($postCurl, CURLOPT_URL, $postURL);
+            curl_setopt($postCurl, CURLOPT_POST, true);
+            curl_setopt($postCurl, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($postCurl, CURLOPT_HTTPHEADER, $postHeader);
+            curl_setopt($postCurl, CURLOPT_POSTFIELDS, $amndata);
+            $postResp = curl_exec($postCurl);
+            curl_close($postCurl);
+            $postjson = json_decode($postResp);
+ 
+            if($postjson->Credentials){
+                $sessToken = $postjson->Credentials->SessionToken;
+                $aws_access_key_id = $postjson->Credentials->AccessKeyId;
+                $aws_secret_access_key = $postjson->Credentials->SecretKey;
+ 
+                //AWS Process
+                $bucket_name = 'lyka-legacy-images-input';
+                $aws_region = 'ap-southeast-1';
+                $host_name = $bucket_name . '.s3.amazonaws.com';
+                $content = "0";
+                $content_title = $mediaID;
+                $aws_service_name = 's3';
+                $timestamp = gmdate('Ymd\THis\Z');
+                $date = gmdate('Ymd');
+                $request_headers = array();
+                $request_headers['x-amz-date'] = $timestamp;
+                $request_headers['Host'] = $host_name;
+                $request_headers['x-amz-security-token'] = $sessToken;
+                $request_headers['x-amz-content-sha256'] = hash('sha256', $content);
+                ksort($request_headers);
+ 
+                $canonical_headers = [];
+                foreach($request_headers as $key => $value) {
+                    $canonical_headers[] = strtolower($key) . ":" . $value;
+                }
+                $canonical_headers = implode("\n", $canonical_headers);
+ 
+                // Signed headers
+                $signed_headers = [];
+                foreach($request_headers as $key => $value) {
+                    $signed_headers[] = strtolower($key);
+                }
+                $signed_headers = implode(";", $signed_headers);
+ 
+                // Cannonical request 
+                $canonical_request = [];
+                $canonical_request[] = "PUT";
+                $canonical_request[] = "/" . $content_title;
+                $canonical_request[] = "";
+                $canonical_request[] = $canonical_headers;
+                $canonical_request[] = "";
+                $canonical_request[] = $signed_headers;
+                $canonical_request[] = hash('sha256', $content);
+                $canonical_request = implode("\n", $canonical_request);
+                $hashed_canonical_request = hash('sha256', $canonical_request);
+ 
+                // AWS Scope
+                $scope = [];
+                $scope[] = $date;
+                $scope[] = $aws_region;
+                $scope[] = $aws_service_name;
+                $scope[] = "aws4_request";
+ 
+                // String to sign
+                $string_to_sign = [];
+                $string_to_sign[] = "AWS4-HMAC-SHA256"; 
+                $string_to_sign[] = $timestamp; 
+                $string_to_sign[] = implode('/', $scope);
+                $string_to_sign[] = $hashed_canonical_request;
+                $string_to_sign = implode("\n", $string_to_sign);
+ 
+                // Signing key
+                $kSecret = 'AWS4' . $aws_secret_access_key;
+                $kDate = hash_hmac('sha256', $date, $kSecret, true);
+                $kRegion = hash_hmac('sha256', $aws_region, $kDate, true);
+                $kService = hash_hmac('sha256', $aws_service_name, $kRegion, true);
+                $kSigning = hash_hmac('sha256', 'aws4_request', $kService, true);
+ 
+                // Signature
+                $signature = hash_hmac('sha256', $string_to_sign, $kSigning);
+ 
+                // Authorization
+                $authorization = [
+                    'Credential=' . $aws_access_key_id . '/' . implode('/', $scope),
+                    'SignedHeaders=' . $signed_headers,
+                    'Signature=' . $signature
+                ];
+                $authorization = 'AWS4-HMAC-SHA256' . ' ' . implode( ',', $authorization);
+ 
+                // Curl headers
+                $curl_headers = [ 'Authorization: ' . $authorization ];
+                foreach($request_headers as $key => $value) {
+                    $curl_headers[] = $key . ": " . $value; }
+ 
+                $url = 'https://' . $host_name . '/' . $content_title;
+                $ch = curl_init($url);
+                curl_setopt($ch, CURLOPT_HEADER, false);
+                curl_setopt($ch, CURLOPT_HTTPHEADER, $curl_headers);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, false);
+                curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+                curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
+                curl_exec($ch);
+                $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                // echo $http_code;
+                if ($http_code != 200) { echo "failed\n"; }
+                
+                $delURL = "https://lyka-legacy-images-input.s3.ap-southeast-1.amazonaws.com/".$mediaID;
+                $delHeader = array(
+                    "x-clientid: $device_id",
+                    "x-amz-date: $timestamp",
+                    "x-amz-content-sha256: STREAMING-AWS4-HMAC-SHA256-PAYLOAD",
+                    "Authorization: $authorization"
+                );
+                $deleteCurlx = curl_init($delURL);
+                curl_setopt($deleteCurlx, CURLOPT_URL, $delURL);
+                curl_setopt($deleteCurlx, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($deleteCurlx, CURLOPT_CUSTOMREQUEST, "PUT");
+                curl_setopt($deleteCurlx, CURLOPT_HTTPHEADER, $delHeader);
+                $deleteResp = curl_exec($deleteCurlx);
+                curl_close($deleteCurlx);
+ 
+                 
+                 if ($posttype == "post") :
+                   $uploadurl="https://posting.mylykaapps.com/api/v3/posts/AddImagePost";
+                 
+                 else :
+                      $uploadurl = "https://momenting.mylykaapps.com/api/v3/moments/AddImageMoment";
+                 endif;
+ 
+                 sleep(1);
+ 
+                 if ($posttype == "post") :
+                 
+                    $postresponse = postX($uploadurl, 
+                    payload($device_id,
+                    '"files":[{
+                     "imageURL":"https://www.w3schools.com/Css/img_lights.jpg",
+                     "height":1024,
+                     "key":"'.$mediaID.'", 
+                     "RemoteStorage":"lyka-legacy-images-input" ,
+                     "type":"image","width":768}],
+                     "isHighlight":false,
+                     "isSharedLink":false,
+                     "mediaTags":"[[]]",
+                     title:"#ActiveLYKA'.date("l").'",
+                     hashtags:"'.$xhash.'",
+                     content: "#'.$contents.'"'),
+                     $bearer);
+                 else : 
+                    $postresponse = postX($uploadurl, 
+                    payload($device_id,
+                    '"files":[{
+                        "imageURL":"https://www.w3schools.com/Css/img_lights.jpg",
+                        "height":2081,
+                        "key":"'.$mediaID.'", 
+                        "RemoteStorage":"lyka-legacy-images-input" ,
+                        "type":"image",
+                        "width":1079}]'),
+                         $bearer);
+                 endif;
+ 
+                 $response_message = $postresponse->message;
+ 
+                 if (strstr($response_message, 'Post saved')) { echo "+1 post";}
+                 if( $response_message == "Moment retrieved."){ echo "+1 moments"; }
+ 
+             } //end post-json
+        }
+     }     
+ 
+ }  //end of postmoments
+ /////////////////////////////////////////////////////////////////////////////
 
    ///////////////////////////////////////////
    // getuserID
@@ -1695,11 +1260,11 @@ function postX($urlx, $payloader, $cooks = ""){
        return $postjson;
 }
 
-function payload($devIDx, $xtraPay, $rTokenx = ""){
+function payload($deviceidx, $xtraPay, $rTokenx = ""){
     $valdata = <<<DATA
             {"device": {
-                "deviceId": "$devIDx",
-                "deviceImei": "$devIDx",
+                "deviceId": "$deviceidx",
+                "deviceImei": "$deviceidx",
                 "deviceModel": "Tecno Spark 7 Pro",
                 "deviceName": "Tecno Spark 7 Pro",
                 "deviceOs": "Android",
